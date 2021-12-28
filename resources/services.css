@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,13 +7,21 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-image: url('./images/autumn.jpg');
+	background-image: url('./images/autumn.avif');
 	background-position: center;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 }
+
+article {
+	display: grid;
+	color: white;
+}
+
+/* Header Styles */
 
 header {
 	display: flex;
@@ -21,14 +31,15 @@ header {
 	text-transform: capitalize;
 	background-color: rgba(255, 255, 255, 0.8);
 	color: rgb(0, 0, 0);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(4px);
 }
 
 header h1 {
-	width: 70%;
+	width: 60%;
 	text-align: left;
-	color: rgb(141, 103, 22);
+	color: rgb(51, 75, 54);
 	font-size: 2.5rem;
+	text-transform: uppercase;
 }
 
 a {
@@ -47,16 +58,172 @@ a:hover {
 	background-color: rgba(153, 153, 153, 0.555);
 }
 
+/* Main Services Styles */
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	padding: 50px;
+	width: 90%;
+}
+
+section div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(3px);
+	padding: 20px;
+	width: 70%;
+}
+
+section h2 {
+	font-size: 2.5rem;
+	width: 100%;
+	margin-left: 3%;
+	text-transform: uppercase;
+	color: rgb(51, 75, 54);
+}
+
+section p {
+	color: rgb(39, 39, 39);
+	font-size: 1.8rem;
+	width: 40%;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+hr {
+	width: 95%;
+	border: 1px solid rgb(39, 39, 39);
+}
+
+img {
+	height: 500px;
+	width: 500px;
+	border-radius: 4px;
+	margin: 25px 50px;
+}
+
+/* Footer Styles */
+
 footer {
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 	color: rgb(39, 39, 39);
 	background-color: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(4px);
 	margin-top: 50px;
 	padding: 30px;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+#contact {
+	margin-right: 50px;
+}
+
+/* Responsive/Mobile Styles */
+
+@media only screen and (max-width: 1100px) {
+	/* Global Styles */
+
+	html {
+		width: 100vw;
+	}
+
+	body {
+		width: 100vw;
+	}
+
+	/* Header Styles */
+
+	header h1 {
+		width: fit-content;
+	}
+
+	/* Section Styles */
+
+	section div {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	/* Header Styles */
+
+	header {
+		width: 100vw;
+		padding: 10px 5px;
+	}
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	header a {
+		font-size: 1rem;
+		padding: 10px;
+		margin: 0;
+	}
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		height: max-content;
+		width: fit-content;
+	}
+
+	/* Section Styles */
+
+	section {
+		padding: 10px 0;
+		width: 100vw;
+	}
+
+	section div {
+		padding: 10px;
+		width: 100%;
+	}
+
+	section h2 {
+		font-size: 1.5rem;
+	}
+
+	section p {
+		font-size: 1.4rem;
+		width: 90%;
+		margin: 10px 0;
+	}
+
+	img {
+		height: 250px;
+		width: 250px;
+		margin: 10px 0;
+	}
+
+	/* About Styles */
+
+	#about {
+		padding: 10px 5px;
+		width: 90vw;
+	}
+
+	#about ul {
+		padding: 0;
+	}
+
+	/* Footer Styles */
+
+	footer {
+		margin-top: 25px;
+		padding: 10px;
+	}
+
+	#contact {
+		margin: 0 0 0 5px;
+	}
 }

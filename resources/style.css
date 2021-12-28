@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,11 +7,18 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-image: url('./images/autumn.jpg');
+	background-image: url('./images/autumn.avif');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+article {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Header Styles */
 
 header {
 	display: flex;
@@ -19,14 +28,15 @@ header {
 	text-transform: capitalize;
 	background-color: rgba(255, 255, 255, 0.8);
 	color: rgb(0, 0, 0);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(4px);
 }
 
 header h1 {
-	width: 70%;
+	width: 60%;
 	text-align: left;
-	color: rgb(141, 103, 22);
+	color: rgb(51, 75, 54);
 	font-size: 2.5rem;
+	text-transform: uppercase;
 }
 
 a {
@@ -45,10 +55,7 @@ a:hover {
 	background-color: rgba(153, 153, 153, 0.555);
 }
 
-article {
-	display: flex;
-	flex-wrap: wrap;
-}
+/* Hero Styles */
 
 .hero {
 	height: 100vh;
@@ -78,16 +85,19 @@ article {
 	font-size: 1.5rem;
 	color: white;
 	border: 1px solid white;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .hero a:hover {
 	color: rgb(235, 151, 54);
 }
 
+/* About Styles */
+
 #about {
 	color: rgb(39, 39, 39);
 	background-color: rgba(255, 255, 255, 0.7);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(6px);
 	border-radius: 5px;
 	margin: auto;
 	padding: 20px 50px;
@@ -97,10 +107,18 @@ article {
 #about h2,
 #about h3 {
 	color: rgb(184, 104, 0);
+	text-transform: uppercase;
 }
 
 #about hr {
 	margin: 20px 0px;
+}
+
+#about p,
+#about li {
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	color: rgb(39, 39, 39);
 }
 
 ul,
@@ -109,6 +127,8 @@ li {
 	margin: 10px 0px;
 }
 
+/* Footer Styles */
+
 footer {
 	display: inline-flex;
 	justify-content: space-between;
@@ -116,7 +136,104 @@ footer {
 	width: 100%;
 	color: rgb(39, 39, 39);
 	background-color: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(4px);
 	margin-top: 50px;
 	padding: 30px;
+}
+
+/* Responsive/Mobile Styles */
+
+@media only screen and (max-width: 1100px) {
+	/* Global Styles */
+
+	html {
+		width: 100vw;
+	}
+
+	body {
+		width: 100vw;
+	}
+
+	/* Header Styles */
+
+	header h1 {
+		width: fit-content;
+	}
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		height: max-content;
+		width: fit-content;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	/* Global Styles */
+
+	html {
+		width: 100vw;
+	}
+
+	body {
+		width: 100vw;
+	}
+
+	/* Header Styles */
+
+	header {
+		width: 100vw;
+		padding: 10px 5px;
+	}
+
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	header a {
+		font-size: 1rem;
+		padding: 10px;
+		margin: 0;
+	}
+
+	/* Hero Styles */
+
+	.hero div {
+		top: 20%;
+		padding: 0;
+		letter-spacing: 1px;
+		width: 100%;
+	}
+
+	.hero p {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 50px;
+	}
+
+	.hero a {
+		font-size: 1.2rem;
+	}
+
+	/* About Styles */
+
+	#about {
+		padding: 10px 5px;
+		width: 90vw;
+	}
+
+	#about ul {
+		padding: 0;
+	}
+
+	/* Footer Styles */
+
+	footer {
+		margin-top: 25px;
+		padding: 10px;
+	}
+
+	#contact {
+		margin: 0 0 0 5px;
+	}
 }
